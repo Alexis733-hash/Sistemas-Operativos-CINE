@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Fenix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Amethysta", serif;
+    background: #1e1e2f;
+    overflow-x: hidden;
+}
+
+header{
+    position: relative;
+    width: 90%;
+    height: 100vh;
+    background: url("https://pequeheroes.com/wp-content/uploads/2024/04/guardiana-de-dragones.jpg")no-repeat ;
+    background-size: cover;
+    transition: 1s linear;    
+    z-index: 2;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+header::after {
+    content: '';
+    position: absolute;
+    width: 30%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    
+}
+header nav{
+    width: 100%;
+    height: 10%;
+    padding: 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/*Tengo que colocar el logo*/
+.logo,
+.end_bx{
+    color:#2f2f5b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+
+    
+}
+header nav .logo img{
+    width: 100px;
+}
+header nav .end_bx ul{
+    list-style: none;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 100%;
+    overflow: hidden;
+}
+header nav .end_bx ul li {
+    margin: 0px 30px;
+}
+header nav .end_bx ul li a {
+    text-decoration: none;
+    color: #5c5ea3;
+    font-size: 22px;
+    font-family: "Amethysta", serif;
+    transition: .3s linear;
+    padding: 20px 20px;
+    color: black;
+    font-weight: bold;
+}
+header nav .end_bx ul li a:hover{
+    color: red;
+    font-size: 25px;
+
+}
+
+header nav .end_bx ul li a :hover {
+    color: #5c5ea3;
+}
+header nav .end_bx .search {
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-right: 20px;
+}
+header nav .end_bx .search input{
+    padding: 10px 0px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #5c5ea3;
+    transition: 1s linear;
+    -webkit-transition: 1s linear;
+    width: 0px;
+}
+
+header nav .end_bx .search input:focus {
+    width: 180px;
+    border: 1px solid #5c5ea3;
+    transition: width 0.5s ease-in-out;
+}
+
+
+header nav .end_bx .search i{
+    color: #d6e4f5;
+    font-size: 13px;
+    cursor: pointer;
+    transition: .4s linear;
+}
+header nav .end_bx .search i :hover{
+    color: #d6e4f5; 
+}
+header nav .end_bx .search .search_input{
+    width: 180px;
+}
+header nav .end_bx .bell{
+    color: rgb(255, 255, 255, .7);
+    font-size: 13px;
+    cursor: pointer;
+    transition: .3s linear;
+    margin: 0px 35px;
+}
+header nav .end_bx .bell:hover{
+    color: #fff;
+}
+header nav .end_bx .user{
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+.contenedor {
+    max-width: 100vw;
+    margin: 0 auto;
+    overflow: hidden;
+}
+header .contenedor{
+    width: 77%;
+    height: auto;
+    margin: 70px auto 0px auto ;
+}
+header .contenedor h6{
+    color: #3b3b72;
+    font-size: 13px;
+    transition: 1s linear;
+}
+header .contenedor h6 span{
+    color: #3b3b72;
+}
+header .contenedor h3{
+    color: #3b3b72;
+    font-size: 15px;
+    margin: 10px 0px;
+    transition: 1s linear;
+}
+header .contenedor h3 i{
+    color: rgb(185, 149, 48);
+    font-size: 12px;
+    margin-right: 3px;
+}
+header .contenedor h3 span{
+    font-size: 12px;
+    margin-left: 3px;
+    transition: 1s linear;
+}
+header .contenedor h1{
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #3b3b72;
+    transition: 1s linear;
+    font-weight: bold;
+}
+header .contenedor p{
+    width: 500px;
+    word-break: break-all;
+    font-size: 12px;
+    font-weight: 500;
+    color: #d6e4f5;
+    margin-bottom: 20px;
+    transition: 1s linear;
+    
+
+}
+header .contenedor .btns{
+    display: flex;
+    align-items: center;
+}
+header .contenedor .btns button{
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #00d2ff ;
+    color: #3b3d72;
+    margin-right: 10px;
+    font-family: "Amethysta", serif;
+    font-size: 12px;
+    font-weight: 500;
+    transition: .3s linear;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0px 2px 8px rgba(59, 61, 114, 0.5);
+
+}
+header .contenedor .btns button:nth-child(2){
+    color: #3b3d72;
+    background: #00d2ff ;
+    box-shadow: 0px 3px 10px ;
+}
+header .contenedor .btns button:hover{
+    border: 2px solid #3b3d72 ;
+    color: #00d2ff;
+    background: #3b3d72;
+    box-shadow: 0px 3px 10px #3b3d72;
+}
+header .contenedor .btns button:hover:nth-child(2):hover{
+    background: #3b3b72;
+    border: 2px solid #cbebf7;
+    box-shadow: 0px 3px 10px #131213;
+    color: #00d2ff;
+}
+header .contenedor .btns button .fas{
+    margin-right: 5px;
+}
+.info {
+    display: none; 
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+header .slider_btns{
+    position: absolute;
+    width: 300px;
+    height: 50px;
+    bottom: 0px;
+    left: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .slider_btns h6{
+    width: 30px;
+    height: 3px;
+    margin-right: 5px;
+    transition: .3s linear;
+    background: rgb(184, 184, 184, .8);
+}
+header .slider_btns h6:nth-child(1){
+    background: #fff;
+}
+header, .pelicula_1, .video_1 {
+    width: 100%;
+    overflow-x: hidden; 
+}
+.siguiente_i{
+    width: 90%;
+    height: auto;
+    border-bottom: 2px solid rgb(184, 184, 184, .1);
+    margin: auto;
+    padding: 20px 0px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.siguiente_i li{
+    list-style: none;
+    transition: .3s linear;
+
+}
+.siguiente_i li a{
+    text-decoration: none;
+    color: rgb(184, 184, 184, .7);
+    transition: .3s linear;
+}
+.siguiente_i li a:hover{
+    color: #fff;
+}
+.siguiente_i li .fas{
+    margin-right: 5px;
+}
+.siguiente_i li a span{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border-radius: 50%;
+    bottom: 115px;
+    left: 11.5%;
+}
+.siguiente_i li .activar {
+    font-size: 15px;
+    color: #fff;
+}
+.siguiente_i li .activar span {
+    background: bisque;
+}
+.categorias_bt{
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    height: 40px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px 20px 0px;
+    overflow: auto;
+    scroll-behavior: smooth;
+    justify-content: space-between;
+} 
+.categorias_bt::-webkit-scrollbar{
+    display: none;
+}
+.categorias_bt button{
+    padding: 4px 30px;
+    background: #00d2ff;
+    border: auto;
+    outline: none;
+    color: #2f2f5b;
+    border-color: #131213;
+    border-radius: 10px;
+    font-family: "Amethysta", serif;
+    font-weight: 400;
+    font-size: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: auto;
+    height: 50px;
+    box-shadow: 0px 2px 8px rgba(59, 61, 114, 0.5);
+
+}
+.categoria_bt button :hover{
+    background: #2f2f5b;
+    color:#00d2ff;
+    border-color: #131213;
+}
+.pelicula_1 {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: 80px;
+    scroll-behavior: smooth;
+}
+.pelicula_1::-webkit-scrollbar{
+    display: flex;
+    justify-content: center;
+}
+
+.pelicula_1 .tarjeta {
+    margin: 0px 5px 0px 0px;
+    min-width: 140px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.pelicula_1 .tarjeta a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.pelicula_1 .tarjeta a img {
+    width: 100%;
+    height: 80%;
+    border-radius: 2px;
+}
+
+.pelicula_1 .tarjeta a .conte {
+    width: 100%;
+    height: 18%;
+    margin-top: 0;
+}
+
+.pelicula_1 .tarjeta a .conte h5 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 12px;
+    margin: 5px;
+}
+
+.pelicula_1 .tarjeta a .conte h6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7px;
+}
+
+.pelicula_1 .tarjeta a .conte h6 span {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: lighter;
+}
+
+.pelicula_1 .tarjeta a .conte h6 .nom_aba {
+    display: flex;
+    align-items: center;
+}
+
+.pelicula_1 .tarjeta a .conte h6 .nom_aba .fas {
+    margin-right: 7px;
+    font-size: 9px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.video_1 {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video_1 video {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    border-radius: 20px;
+}
+
+.video_1 .control {
+    position: absolute;
+    width: 90%;
+    height: 50px;
+    background: #131213;
+    border-radius: 20px;
+    bottom: 10px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 9999;
+}
+
+/* Contenedor Play */
+.video_1 .play {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre iconos */
+    color: #fff;
+}
+
+.video_1 .play .bi {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Barra de progreso */
+.video_1 .empezar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    width: 50%;
+}
+
+.video_1 .empezar span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+}
+
+.video_1 .empezar .inten {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.video_1 .empezar .inten input {
+    width: 90%;
+    height: 4px;
+    cursor: pointer;
+}
+
+/* Controles de Volumen */
+.video_1 .volumen {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.video_1 .volumen input[type="range"] {
+    width: 0;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+.video_1 .volumen input[type="range"].inpun_vol {
+    width: 100px;
+    opacity: 1;
+}
+
+.video_1 .control .cc_vol {
+    width: 230px;
+}
+
+.video_1 .control .start_seekbar {
+    width: 70%;
+}
+.video_1 .tituloVideo{
+    position: absolute;
+    top: 0px;
+    left: 2%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    z-index: 999;
+    margin-top: 20px;
+}
+.video_1 .mirar{
+    position: absolute;
+    top: 8%;
+    left: 2%;
+    color: rgb(184, 184, 184, .6);
+    font-size: 13 px;
+    z-index: 999;
+}
+.video_1 .mirar i{
+    font-size: 10px;
+    margin-right: 3px;
+}
+.video_1 .cabeza{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: #fff;
+    font-size: 16px;
+    z-index: 999;
+}
+.video_1 .cabeza i:nth-child(2){
+    margin-left: 20px;
+}
+.video_1 .videoLis{
+    position: absolute;
+    width: 100px;
+    height: 300px;
+    top: 25%;
+    left: 2%;
+    transition: .6s linear;
+}
+
+.video_1 .videoLis img{
+    width: 70px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border: 1px solid rgb(255, 255, 255, .6);
+    opacity: 0;
+}
+.video_1:hover .videoLis img{
+    opacity: 1;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; 
+    width: 100%;
+}
+
+.navbar ul li {
+    position: relative;
+    margin-right: 0; 
+}
+
+.navbar ul li a {
+    font-size: 22px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+
+.navbar ul li a:hover {
+    color: red;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        font-size: 5px;
+        line-height: 1.6;
+    }
+    header{
+        background-size: cover; 
+        background-position: center top; 
+        height: 80vh;
+        flex-direction: column;
+        text-align: center;
+    }
+    .end_bx {
+        font-size: 5px;
+        margin: 0px 1px;
+    }
+
+    .end_bx ul {
+        margin-right: 15%;
+ 
+    }
+
+    .logo {
+        margin-top: 30px;
+        font-size: 1.5rem; 
+        margin-bottom: 10px;
+    }
+
+    .search input {
+        width: 100%; 
+    }
+
+   
+    .end_bx ul li a {
+        font-size: 5px; 
+    }
+    .search {
+        width: 100%; 
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .end_bx ul {
+        display: flex;
+        gap: 15px;
+    }
+
+    .contenedor {
+        text-align: left;
+        padding: 0;
+    }
+
+    .contenedor h1 {
+        font-size: 2px;
+    }
+    
+    .pelicula_1 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .tarjeta {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+    }
+
+    .tarjeta:hover {
+        transform: scale(1.05);
+    }
+
+    .tarjeta img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .conte h5 {
+        font-size: 1.1rem;
+    }
+
+    .video_1 {
+        max-width: 100%;
+        max-height: 400px; 
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1b1f3b; 
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .video_1 video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        max-height: 300px; 
+    }
+
+    .tituloVideo {
+        font-size: 5px;
+        color: #ffffff;
+    }
+    .mirar, .ojito {
+        margin-top: 25px;
+        margin-left: 20px; 
+    }
+
+    .videoLis {
+        display: flex;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .videoLis img {
+        width: 80px;
+        height: 60px;
+        margin-left: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .videoLis img:hover {
+        transform: scale(1.05);
+    }
+
+    .siguiente_i {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .siguiente_i li a {
+        color: #fff;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+        margin: auto;
+        background-color: #3b3d72;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .siguiente_i li a:hover {
+        background-color: #2b2d54;
+    }
+    .navbar {
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 18px; 
+    }
+}
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    header {
+        background-size: cover;
+        background-position: center top;
+        height: 60vh;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .info{
+        display: flex;
+        justify-content: center; 
+        text-align: left;
+        margin-left: 0%;
+
+    }
+    
+    .logo {
+        margin-top: 10px;
+        font-size: 1.2rem; 
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .end_bx {
+        font-size: 12px;
+        margin: 0px 10;
+    }
+
+    .search input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 20px; 
+    }
+
+    .navbar {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor {
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .contenedor h1 {
+        font-size: 1.5rem; 
+    }
+
+    .pelicula_1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .tarjeta {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease;
+    }
+
+    .tarjeta:hover {
+        transform: scale(1.05);
+    }
+
+    .tarjeta img {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .conte h5 {
+        font-size: 1rem;
+    }
+
+    .video_1 {
+        max-width: 100%;
+        max-height: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #1b1f3b;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .video_1 video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        max-height: 200px;
+    }
+
+    .tituloVideo {
+        font-size: 1.2rem; 
+        color: #ffffff;
+        margin: 10px 0;
+    }
+
+    .mirar, .ojito {
+        margin-top: 45px;
+        margin-left: 15px;
+    }
+
+    .videoLis {
+        display: flex;
+        gap: 10px;
+        margin-top: px;
+        margin-left: 20px;
+    }
+
+    .videoLis img {
+        width: 15px;
+        height: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .videoLis img:hover {
+        transform: scale(1.05);
+    }
+
+    .siguiente_i {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .siguiente_i li a {
+        color: #fff;
+        font-size: 1rem;
+        padding: 10px 15px;
+        margin: auto;
+        background-color: #3b3d72;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        
+    }
+
+    .siguiente_i li a:hover {
+        background-color: #2b2d54;
+    }
+    .navbar ul {
+        flex-direction: column !important; 
+        align-items: flex-end !important;
+        gap: 2px; 
+    }
+    
+    .navbar ul li a {
+        font-size: 10px !important; 
+        padding: 5px !important; 
+        line-height: 1 !important; 
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">CINE FENIX</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/PaginaPrincipalCine/PaginaPrincipal.html">Inicio</a></li>
+                    <li><a href="/CandyBar/Contacto.html">Contactos</a></li>
+                    <li><a href="/CandyBar/index.html">Candy Bar</a></li>
+                </ul>
+            </nav>            
+        </nav>
+        <div class="contenedor">
+            <h6>duracion <span>135 min</span></h6>
+            <h3><i class="fas fa-star">Terror</i>
+            <h1>La Leyenda del Dragon</h1>
+            <p>Son tiempos oscuros en la China imperial. Los dragones, antaño amigos y sabios aliados de los hombres, han sido perseguidos durante años y encerrados en mazmorras. En una remota fortaleza en las montañas, una niña ayuda a escapar al último de los dragones y se une a él en una apasionante misión para recuperar el tesoro más preciado: El último huevo de dragón, robado por un malvado hechicero que quiere explotar su potencial mágico para alcanzar la inmortalidad. Adaptación de la primera de las seis novelas de la saga literaria homónima de Carole Wilkins.</p>
+            <div class="btns">
+                <button id="btn1"><i class="fas fa-play"></i> 2D Atmos </button>
+                <button id="btn2"><i class="fas fa-play"></i> 2D CXC Atmos DOB</button>
+            </div>
+            <div class="info" id="info">
+                <p id="hora"></p>
+                <p id="precio"></p>
+            </div>       
+        </div>
+    </header >
+    <div class="pelicula_1" style="margin-top: 40px;">
+        <div class="tarjeta">
+            <a href="#">
+                <img src="./img2/4.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">Nunca te Sueltes</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>115 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="https://static.cinepolis.com/img/peliculas/48002/1/1/48002.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">Operacion Zombie</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>120 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="https://th.bing.com/th/id/OIP.YJvhzWhJ6uWvXhkT4mUdUwAAAA?rs=1&pid=ImgDetMain" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">Mascotas en Apuros</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>100 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="https://www.mubis.es/media/movies/7948/329996/robot-salvaje-original.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">Robot Salvaje</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>115 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="https://comprar2.cinecenter.com.bo/billboard/app/poster/generic/596.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">La Sustancia</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>155 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="https://comprar2.cinecenter.com.bo/billboard/app/poster/generic/612.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">VENON Ultimo Baile</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>120 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="./img2/3.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">Codigo Traje Rojo</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>100 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>
+        <div class="tarjeta">
+            <a href="#">
+                <img src="./img2/8.jpg" alt="">
+                <div class="conte">
+                    <h5 style="text-align: center;">El Ladron de Perros</h5>
+                    <h6>
+                        <span>2024</span>
+                        <div class="nom_aba">
+                            <span>Duracion:</span> 
+                            <span>140 min</span>
+                        </div>
+                    </h6>
+                </div>
+            </a>
+        </div>   
+    </div>
+    <div class="video_1">
+        <video src="./VideosTrailers/CÓDIGO TRAJE ROJO  Tráiler Oficial 2  Doblado [1].webm" autoplay controls loop></video>    
+        <h4 class="tituloVideo">Trailer Codigo Traje Rojo</h4>
+        <span class="mirar"><i class="fas fa-eye"> mirar</i></span>
+        <div class="cabeza"><i class="fas fa-heart"></i> <i class="fa-solid fa-plus"></i></div>
+        <div class="videoLis">
+            <img src="https://comprar2.cinecenter.com.bo/billboard/app/poster/generic/615.jpg" alt="" class="video1">
+            <img src="https://comprar2.cinecenter.com.bo/billboard/app/poster/generic/620.jpg" alt="" class="video1">
+            <img src="https://comprar2.cinecenter.com.bo/billboard/app/poster/generic/629.jpg" alt="" class="video1">
+        </div>
+    </div>
+    <div class="siguiente_i" style="margin-top: 20px;">
+        <li><a href="/PaginaPrincipalCine/PaginaPrincipal.html" class="activar"><i class="fas fa-angle-double-up"></i> Inicio</a></li>
+        <li><a href="/CandyBar/Contacto.html"><i class="fa-solid fa-photo-film"></i> Contactos </a></li>
+        <li><a href="/CandyBar/index.html"><i class="fas fa-plus"></i> Candy Bar <span></span></a></li>
+    </div> 
+    <script src="app.js">
+
+    </script>
+</body>
+</html>

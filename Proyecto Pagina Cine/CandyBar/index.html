@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="icon" href="/img/favicon.ico">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+    <header>
+        <span class="logo">
+            <a href="/">CineFenix</a>
+        </span>
+
+        <nav class="navigation-header">
+            <a href="/PaginaPrincipalCine/PaginaPrincipal.html">Inicio</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="/InicioSesion/inicio-sesion.html">Iniciar Sesión</a>
+        </nav>
+
+        <ul class="social-links">
+            <!--Facebook-->
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </li>
+            <!--Instagram-->
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <!--WhatsApp-->
+            <li>
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+
+    </header>
+
+    <section class="container section-banner-hero">
+        <div class="content">
+            <h1>¡Prepárate para el Snack Perfecto!</h1>
+            <p>
+                “Disfruta de tus películas favoritas con las mejores palomitas, dulces irresistibles y bebidas refrescantes. ¡Todo lo que necesitas para un momento de cine inolvidable está aquí!”
+            </p>
+
+            
+
+            <button>
+                ¡Haz tu pedido ahora!
+                <i class="fa-solid fa-circle-play"></i>
+            </button>
+        </div>
+
+        <div class="container-img">
+            <img src="/CandyBar/img/img-banner.png" alt="Imagen Banner Hero">
+        </div>
+    </section>
+
+    <section class="container section-categories">
+        <div class="header">
+            <h2>Categorías</h2>
+            <a href="#" class="btn-all-categories">
+                Ver todas las categorías
+            </a>
+        </div>
+
+        <div class="list-card-categories">
+
+            <!--Primera categoria-->
+            <div class="card-category breakfast">
+                    <img src="/CandyBar/img/icono-palomitas.png" alt="Icono Palomitas">    
+                    <a href="http://127.0.0.1:3000/Desayuno.html">
+                        <p>Palomitas</p>
+                    </a>
+            </div>
+
+            <!--Segunda categoria-->
+            <div class="card-category vegan">
+                <img src="/CandyBar/img/icono-refresco.png" alt="Icono Refrescos">
+                <p>Refrescos</p>
+            </div>
+
+            <!--Tercera categoria-->
+            <div class="card-category meat">
+                <img src="/CandyBar/img/icono-dulce.png" alt="Icono Golosinas">
+                <a href="http://127.0.0.1:3000/Carne.html">
+                    <p>Golosinas</p>
+                </a>
+            </div>
+
+            <!--Cuarta categoria-->
+            <div class="card-category desert">
+                <img src="/CandyBar/img/icono-helado.png" alt="Icono Helados">
+                <a href="http://127.0.0.1:3000/Postres.html">
+                    <p>Helados</p>
+                </a>
+            </div>
+
+            <!--Quinta categoria-->
+            <div class="card-category chocolate">
+                <img src="/CandyBar/img/icono-nachos.png" alt="Icono Nachos">
+                <p>Nachos</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Elige Aquí los Snacks Más Recomendados</h2>
+
+        <p>
+            Descubre los favoritos del cine: desde palomitas frescas hasta nachos con queso y helados irresistibles. ¡Encuentra el snack perfecto para acompañar tu película!
+        </p>
+
+        <div class="list-card-recipes">
+
+            <!--Primera receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-palomitas-saladas.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Palomitas de Maíz Clásicas Saladas</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Seguda receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-palomitas-caramelizadas.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Palomitas de Maíz Caramelizadas</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Tercera receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-palomitas-picantes.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Palomitas de Maíz Picantes <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Cuarta receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-palomitas-picantes.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Palomitas de Maíz Dulces <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Quinta receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-soda-clasica.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Refresco Clásico de Cola <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Sexta receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-soda-maracuya.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Refresco Maracuyá Burbujeante </h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Septima receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-nachos-bbq.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Nachos BBQ</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Octava receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-nachos-supreme.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Nachos Supreme</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--Novena receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-nachos-tex.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Nachos Tex-Mex</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+
+    
+
+    
+
+    <div class="container section-more-recipes">
+        <h2>Prueba estos snacks para disfrutar <br> tu pelicula favorita.</h2>
+        <p>
+            Deléitate con snacks sabrosas. Desde clásicos reconfortantes hasta giros innovadores, descubre que snaks alegrarán cada bocado.
+        </p>
+
+        <div class="list-card-recipes">
+
+            <!--1 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-dulce-frutas.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Gomitas de Frutas <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--2 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-dulce-chocolate.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Chocolates Rellenos <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--3 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-dulce-regaliz.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Regaliz Ácido <br> <br></h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--4 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-dulce-chicle.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Bolitas de Chicle de Colores</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--5 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-helado-mango.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Helado de Mango Tropical</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--6 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-helado-crema.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Helado Cookies and Cream</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!--7 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-helado-matcha.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Helado de Matcha</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!--8 receta-->
+            <div class="card-recipes">
+                <div class="container-img">
+                    <img src="/CandyBar/img/img-helado-nuez.jpg" alt="Imagen Receta">
+                    <button class="btn-favorite">
+                        <i class="fa-solid fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="content">
+                    <h3>Helado de Nuez de Macadamia</h3>
+                    <div class="footer">
+                        <span class="time">
+                            <i class="fa-solid fa-clock"></i>
+                            30 minutos
+
+                        </span>
+                        
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!--ABAJO PARTE-->
+    <footer class="container">
+        <div class="first-section">
+            <span class="logo">
+                <a href="/">CineFenix</a>
+            </span>
+
+            <nav class="navigation-footer">
+                <a href="/PaginaPrincipalCine/PaginaPrincipal.html">Inicio</a>
+                <a href="/CandyBar/Contacto.html">Contacto</a>
+                <a href="/InicioSesion/inicio-sesion.html">Iniciar Sesión</a>
+            </nav>
+        </div> 
+
+        <div class="second-section">
+            <div></div>
+            <p class="copyright">
+                &copy;2024 Velasquez Ezequiel, Flores Jhojan, Mena Rudy, Machaca Sebastian. Diseñado en <span>RamirezCO</span>
+            </p>
+
+            <ul class="social-links">
+                <!--Facebook-->
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </li>
+                <!--Instagram-->
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <!--WhatsApp-->
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>   
+
+        </div>
+    </footer>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

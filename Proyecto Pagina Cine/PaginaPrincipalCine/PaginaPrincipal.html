@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Fenix</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Bebas+Neue&display=swap');
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+    }
+
+    body {
+        background-color: #3C4A5A;
+        color: white;
+        font-family: "Amethysta", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header{
+        background-image: url(img2/bmr.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        font-size: 35px;
+        color: white;
+    }
+
+    .menu .navbar ul li{
+        position: relative;
+        float: left;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 22px;
+        padding: 20px;
+        color: white;
+        display: block;
+    }
+    .menu .navbar ul li a:hover{
+        color: red;
+    }
+
+    #menu{
+        display: none;
+    }
+    .menu.icono{
+        width: 25px;
+    }
+
+    .menu label{
+        cursor: pointer;
+        display: none;
+    }
+
+    .header-content{
+        display: flex;
+        width: 100%;
+    }
+    .btn-1{
+        display: inline-block;
+        padding: 7px 20px;
+        background-color: red;
+        color: white;
+        font-size: 20px;
+    }
+
+    .btn-2{
+        width: 115px;
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: red;
+        border-radius: 200px;
+        font-size: 25px;
+        margin-top: 30px;
+        color: white;
+        
+    }
+
+    .movies{
+        padding: 50px 0 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    h2{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+    
+    hr{
+        border: 1px solid red;
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .box-container-1,
+    .box-container-2,
+    .box-container-3,
+    .box-container-4{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+    }
+
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4{
+        border-radius: 5px;
+        z-index: 1000;
+        display: none;
+    }
+
+    .box-1:hover{
+        transform: translateY(-25px);
+    } 
+
+    .box-2:hover{
+        transform: translateY(-25px);
+    }
+
+    .box-3:hover{
+        transform: translateY(-25px);
+    }
+
+    .box-4:hover{
+        transform: translateY(-25px);
+    }
+
+    .box-1:nth-child(1),
+    .box-1:nth-child(2),
+    .box-1:nth-child(3),
+    .box-1:nth-child(4){
+        display: inline-block;
+    }
+
+    .box-2:nth-child(1),
+    .box-2:nth-child(2),
+    .box-2:nth-child(3),
+    .box-2:nth-child(4){
+        display: inline-block;
+    }
+
+    .box-3:nth-child(1),
+    .box-3:nth-child(2),
+    .box-3:nth-child(3),
+    .box-3:nth-child(4){
+        display: inline-block;
+    }
+
+    .box-4:nth-child(1),
+    .box-4:nth-child(2),
+    .box-4:nth-child(3),
+    .box-4:nth-child(4){
+        display: inline-block;
+    }
+
+    .load-more{
+        margin-top: 40px;
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 15px;
+        border: 1px solid red;
+        color: red;
+        font-size: 16px;
+        cursor: pointer;
+        align-self: flex-end;
+    }
+
+    .load-more:hover
+    {
+        background-color: red;
+        color: white;
+    }
+
+    .content img{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .content h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .content{
+        color: white;
+        font-size: 20px;
+    }
+
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        padding: 100px 0;
+        margin-top: 100px;
+        border-top: 1px solid red;
+        align-items: center;
+    }
+
+    .footer ul{
+        display: flex;
+    }
+    .footer h3{
+        font-size: 30px;
+    }
+
+    .footer a{
+        color: white;
+        font-size: 20px;
+        margin-right: 20px;
+        display: block;
+    }
+
+    .footer a:hover{
+        color: red;
+    }
+
+
+    @media (max-width:991px){
+
+        .header{
+        background-image: url(img2/bnr3.jpg);
+
+        }
+        
+        .menu{
+            padding: 20px;
+        }
+
+        .menu label{
+            display: initial;
+        }
+
+        .menu .navbar{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: black;
+            display: none;
+        }
+        .menu .navbar ul li{
+            width: 100%;
+        }
+        .btn-1{
+            display: none;
+        }
+
+        #menu:checked ~  .navbar{
+            display: initial;
+        }
+
+        .header-content{
+            flex-direction: column;
+            padding: 180px 30px 30px 30px;
+        }
+        .movies{
+            padding: 30px 50px;
+        }
+
+        .footer{
+            margin-top: 30px;
+            padding: 30px;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer ul{
+            margin-top: 15px;
+            justify-content: center;
+        }
+    }
+</style>
+<body>
+    
+    <header class="header">
+        <div class="menu container">
+
+            <a href="#" class="logo">CineFenix</a>
+            <input type="checkbox" id="menu">
+            <label for="menu">
+                <img src="img2/menu.png" class="menu-icono" alt="menu">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/CandyBar/Contacto.html">Contactos</a></li>
+                    <li><a href="/CandyBar/index.html">Candy Bar</a></li>
+                    <li><a href="/InicioSesion/registro.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="movies container">
+        <h2>Cartelera</h2>
+        <hr>
+
+        <div class="box-container-1">
+            
+            <div class="box-1">
+                <div class="content">
+                    <a href="./MascotasEnApuros.html"><img src="img2/1.jpg" alt="1"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                        
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="./OperacionZombie.html"><img src="img2/2.jpg" alt="2"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        20:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="./CodigoTrajeRojo.html"><img src="img2/3.jpg" alt="3"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        12:15-49Bs <br>
+                        17:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="./NuncaTeSueltes.html"><img src="img2/4.jpg" alt="4"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        14:15-49Bs <br>
+                        17:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="RobotSalvaje.html"><img src="img2/5.jpg" alt="5"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        18:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="LaSustancia.html"><img src="img2/6.jpg" alt="6"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="Venon.html"><img src="img2/7.jpg" alt="7"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="ElLadronDePerros.html"><img src="img2/8.jpg" alt="8"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="Terrifier.html"><img src="img2/9.jpg" alt="9"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        18:15-49Bs <br>
+                        20:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="LaLeyendaDelDragon.html"><img src="img2/10.jpg" alt="10"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        15:30-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="./ElTiempoQueTenemos.html"><img src="img2/11.jpg" alt="11"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        16:15-49Bs <br>
+                        18:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="content">
+                    <a href="ElGuardianDeLaMagia.html"><img src="img2/12.jpg" alt="12"></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        18:15-49Bs <br>
+                        21:00-49Bs
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more" id="load-more-1">Cargar mas</div>
+    </section>
+
+    <section class="movies container">
+        <h2>Estrenos de la semana</h2>
+        <hr>
+
+        <div class="box-container-2">
+            
+
+            <div class="box-2">
+                <div class="content">
+                    <a href="CodigoTrajeRojo.html"><img src="img2/3.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        17:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-2">
+                <div class="content">
+                    <a href="NuncaTeSueltes.html"><img src="img2/4.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-2">
+                <div class="content">
+                    <a href="OperacionZombie.html"><img src="img2/2.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        12:15-49Bs <br>
+                        15:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="load-more" id="load-more-2">Cargar mas</div>
+    </section>
+
+    <section class="movies container">
+        <h2>Proximamente</h2>
+        <hr>
+
+        <div class="box-container-3">
+            
+            <div class="box-3">
+                <div class="content">
+                    <a href="GladiadorII.html"><img src="img2/e1.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        16:15-49Bs <br>
+                        19:30-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-3">
+                <div class="content">
+                    <a href="Mufasa.html"><img src="img2/e2.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        18:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-3">
+                <div class="content">
+                    <a href="Niko.html"><img src="img2/e3.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        18:15-49Bs <br>
+                        20:30-49Bs
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more" id="load-more-3">Cargar mas</div>
+    </section>
+
+    <section class="movies container">
+        <h2>Lo más visto</h2>
+        <hr>
+
+        <div class="box-container-4">
+            <div class="box-4">
+                <div class="content">
+                    <a href="MascotasEnApuros.html"><img src="img2/1.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        11:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="OperacionZombie.html"><img src="img2/2.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        12:15-49Bs <br>
+                        14:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="CodigoTrajeRojo.html"><img src="img2/3.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        17:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="NuncaTeSueltes.html"><img src="img2/4.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        19:15-49Bs <br>
+                        21:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="RobotSalvaje.html"><img src="img2/5.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        18:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="LaSustancia.html"><img src="img2/6.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        19:15-49Bs <br>
+                        21:30-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="Venon.html"><img src="img2/7.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        18:15-49Bs <br>
+                        20:30-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href="ElLadronDePerros.html"><img src="img2/8.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        20:15-49Bs <br>
+                        22:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href=""><img src="img2/9.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        15:15-49Bs <br>
+                        18:20-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href=""><img src="img2/10.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        19:15-49Bs <br>
+                        21:00-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href=""><img src="img2/11.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        16:35-49Bs <br>
+                        18:20-49Bs
+                    </p>
+                </div>
+            </div>
+
+            <div class="box-4">
+                <div class="content">
+                    <a href=""><img src="img2/12.jpg" alt=""></a>
+                    <h3>Pelicula 2D</h3>
+                    <p>
+                        Horario: <br>
+                        13:15-49Bs <br>
+                        19:00-49Bs
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-more" id="load-more-4">Cargar mas</div>
+    </section>
+    <footer class="footer container">
+        <h3>CineFenix</h3>
+
+        <ul>
+            <li><a href="/PaginaPrincipalCine/PaginaPrincipal.html">Inicio</a></li>
+            <li><a href="#peliculas">Peliculas</a></li>
+            <li><a href="/CandyBar/Contacto.html">Contactos</a></li>
+            <li><a href="/CandyBar/index.html">Candy Bar</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        let loadMoreBtn1 = document.querySelector('#load-more-1');
+        let currentItem1 = 4;
+
+        loadMoreBtn1.onclick = () => {
+            let boxes = [...document.querySelectorAll(
+                '.box-container-1 .box-1'
+            )];
+            for(var i = currentItem1; i <currentItem1+4; i++){
+                boxes[i].style.display='inline-block';
+            }
+            currentItem1 += 4;
+            if(currentItem1 >= boxes.length){
+                loadMoreBtn1.style.display='none';
+            }
+        }
+
+        let loadMoreBtn2 = document.querySelector('#load-more-2');
+        let currentItem2 = 0;
+
+        loadMoreBtn2.onclick = () => {
+            let boxes = [...document.querySelectorAll(
+                '.box-container-2 .box-2'
+            )];
+            for(var i = currentItem2; i <currentItem2+3; i++){
+                boxes[i].style.display='inline-block';
+            }
+            currentItem2 += 3;
+            if(currentItem2 >= boxes.length){
+                loadMoreBtn2.style.display='none';
+            }
+        }
+
+        let loadMoreBtn3 = document.querySelector('#load-more-3');
+        let currentItem3 = 0;
+
+        loadMoreBtn3.onclick = () => {
+            let boxes = [...document.querySelectorAll(
+                '.box-container-3 .box-3'
+            )];
+            for(var i = currentItem3; i <currentItem3+3; i++){
+                boxes[i].style.display='inline-block';
+            }
+            currentItem3 += 3;
+            if(currentItem3 >= 3){
+                loadMoreBtn3.style.display='none';
+            }
+        }
+
+        let loadMoreBtn4 = document.querySelector('#load-more-4');
+        let currentItem4 = 4;
+
+        loadMoreBtn4.onclick = () => {
+            let boxes = [...document.querySelectorAll(
+                '.box-container-4 .box-4'
+            )];
+            for(var i = currentItem4; i <currentItem4+4; i++){
+                boxes[i].style.display='inline-block';
+            }
+            currentItem4 += 4;
+            if(currentItem4 >= boxes.length){
+                loadMoreBtn4.style.display='none';
+            }
+        }
+    </script>
+</body>
+</html>
